@@ -57,7 +57,7 @@ html {
 .sidebar {
   text-align: left;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.66);
   background-color: #202020;
 }
 
@@ -71,10 +71,13 @@ html {
     text-align: left;
   }
 }
-
 /* Sidebar links */
 .sidebar a {
   color: #fff;
+}/* Sidebar links */
+
+.sidebar .title {
+  color: #6a9fb5;
 }
 
 /* About section */
@@ -268,7 +271,7 @@ a.sidebar-social-item.active:focus {
 /*  background-color: #6a9fb5;*/
 /*}*/
 .theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
+.theme-base-0d .related-posts li a:hover h1  {
   color: #6a9fb5;
 }
 /*.theme-base-0d body .content .container{*/
