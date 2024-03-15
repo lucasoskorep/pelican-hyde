@@ -128,8 +128,8 @@ function waitForElm(selector) {
     function resize() {
         largeHeader = document.getElementById('sidebar');
         var positionInfo = largeHeader.getBoundingClientRect();
-        width = positionInfo.width;
-        height = positionInfo.height;
+        canvas.width = positionInfo.width
+        canvas.height = positionInfo.height
     }
 
     // animation
