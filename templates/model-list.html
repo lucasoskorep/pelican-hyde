@@ -8,11 +8,11 @@
     {% for article in articles %}
     {% if article.category == 'models' %}
     <div class="post">
-        {{ article.image }}
         <h1 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
         </h1>
         <span class="post-date">{{ article.locale_date }}</span>
+        <img alt="plant-pot" src="/images/{{ article.image }}">
         {% if article.tags %}
         <span class="post-tags">
 						Tags:
@@ -24,9 +24,9 @@
 					</span>
         {% endif %}
         <p>
-            {{ article.summary }}
+<!--            {{ article.summary }}-->
         </p>
-        <a class="read-more" href="{{ article.url }}">Continue reading »</a>
+        <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">More Info</a><a class="read-more" href="{{ article.printables }}">Download on Printables</a>
     </div>
     {% endif %}
     {% endfor %}
