@@ -3,12 +3,22 @@
 {% block content %}
 <div class="posts">
     <h1 class="post-title">
-        <a>Models</a>
+        <a>3d Printing and Modeling
+{% set categories_set = [] %}
+{% for article in articles %}
+    {% if article.category not in categories_set %}
+        {% set categories_set = categories_set.append(article.category) %}
+    {% endif %}
+{% endfor %}
+{% for category in categories_set %}
+    {{ category }}
+{% endfor %}
+        {{ categories_set }}</a>
     </h1>
     {% for article in articles %}
     {% if article.category == 'models' %}
     <div class="post">
-        <h1 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
+        <h1 href="{{ SITEURL }}/{{ article.url }}">
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
         </h1>
         <span class="post-date">{{ article.locale_date }}</span>
